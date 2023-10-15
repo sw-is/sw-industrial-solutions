@@ -1,0 +1,158 @@
+.industryDirections1 {
+  position: relative;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.ourCoreSystems {
+  position: relative;
+  font-size: var(--h2-size);
+  letter-spacing: -0.03em;
+  line-height: 120%;
+  color: var(--neutral-black);
+}
+.title {
+  width: 36.88rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.cardIconFrame {
+  position: relative;
+  width: 5.81rem;
+  height: 6rem;
+}
+.title1 {
+  position: relative;
+  line-height: 136%;
+}
+.industrial {
+  align-self: stretch;
+  flex: 1;
+  border-radius: var(--br-xl);
+  background-color: var(--gray-100);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-xl);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.icon1 {
+  position: absolute;
+  height: 75%;
+  width: 83.33%;
+  top: 12.5%;
+  right: 8.33%;
+  bottom: 12.5%;
+  left: 8.33%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  display: none;
+}
+.groupChild {
+  position: absolute;
+  top: -0.09rem;
+  left: -0.09rem;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-gainsboro);
+  border: 3px solid var(--neutral-black);
+  box-sizing: border-box;
+  width: 2.58rem;
+  height: 1.45rem;
+}
+.frameChild {
+  position: relative;
+  width: 1.76rem;
+  height: 0.33rem;
+}
+.groupParent {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+}
+.frameWrapper {
+  position: absolute;
+  height: 54.88%;
+  width: 65.64%;
+  top: 77.44%;
+  right: 17.18%;
+  bottom: -32.32%;
+  left: 17.18%;
+}
+.rectangleParent {
+  position: absolute;
+  top: 1.61rem;
+  left: 0.4rem;
+  width: 2.4rem;
+  height: 1.26rem;
+}
+.icon,
+.icon2 {
+  position: absolute;
+  overflow: hidden;
+}
+.icon2 {
+  height: 57.86%;
+  width: 63.63%;
+  top: 1.33%;
+  right: 18.13%;
+  bottom: 40.8%;
+  left: 18.24%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.icon {
+  top: calc(50% - 24.5px);
+  left: calc(50% - 24.38px);
+  width: 3.13rem;
+  height: 3.13rem;
+}
+.blackSquare {
+  position: absolute;
+  top: 0.03rem;
+  left: calc(50% - 35.25px);
+  border-radius: var(--br-xl);
+  background-color: var(--color-gainsboro);
+  width: 4.38rem;
+  height: 4.38rem;
+}
+.cardIcon {
+  position: absolute;
+  right: 1.8rem;
+  bottom: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.contentBlock,
+.industryDirections {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-11xs);
+  font-size: var(--h3-size);
+  color: var(--neutral-black);
+}
+.industryDirections {
+  flex-direction: column;
+  padding: var(--padding-61xl) var(--padding-101xl) var(--padding-101xl);
+  gap: var(--gap-41xl);
+  text-align: left;
+  font-size: var(--badge-s-size);
+  color: var(--blue-primary);
+  font-family: var(--description);
+}

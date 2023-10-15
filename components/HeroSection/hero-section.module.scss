@@ -1,0 +1,98 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+.gradient {
+  background: linear-gradient(180deg, #e8f2ff, #f4f9ff 55.8%, #fff);
+  height: 74.81rem;
+}
+
+.content * {
+  box-sizing: border-box;
+}
+.content {
+  background-image: url("/hero.svg");
+  background-position: center calc(50% - 15vh);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $neutral-black;
+  padding: 15vh 0 20vh 0;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-21xl;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  @include device(tablet){
+    padding: 30vh 0 20vh 0;
+  }
+  @include device(XXL-screen){
+    background-position: center calc(50% - 15vw);
+  }
+
+  @include device(XXXL-screen){
+    background-position: center calc(50% - 20vw);
+  }
+}
+
+.content__title {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-xl;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  padding: 0 10vw 0 10vw;
+
+  text-align: center;
+  position: relative;
+  align-self: stretch;
+}
+.content__company-name {
+  @include line-height($badge-m-size);
+  font-size: $badge-m-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.content__header {
+  @include h1-header();
+}
+.content__text {
+  @include text-l();
+
+  p{
+    margin: 0;
+  }
+}
+
+
+.content__scroll-down {
+  padding: $padding-21xl $padding-3xs;
+  display: flex;
+  flex-direction: row;
+  gap: $gap-9xs;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.content__scroll-text {
+  text-align: center;
+  font-size: $text-s-size;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content__scroll-icon {
+  flex-shrink: 0;
+  position: relative;
+  overflow: visible;
+}

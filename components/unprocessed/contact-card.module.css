@@ -1,0 +1,56 @@
+.getInTouch {
+  position: relative;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.ourAgentsAre {
+  margin: 0;
+}
+.ourAgentsAreContainer {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--h2-size);
+  letter-spacing: -0.03em;
+  line-height: 120%;
+  color: var(--neutral-black);
+}
+.agentBlockV2Parent,
+.title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.title {
+  width: 36.88rem;
+  flex-direction: column;
+  gap: var(--gap-3xs);
+}
+.agentBlockV2Parent {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-11xs);
+}
+.bonnerStr12 {
+  align-self: stretch;
+  position: relative;
+  line-height: 160%;
+  font-weight: 500;
+}
+.adress,
+.contact {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+  color: var(--neutral-black);
+}
+.contact {
+  padding: var(--padding-61xl) var(--padding-101xl) var(--padding-101xl);
+  gap: var(--gap-41xl);
+  text-align: left;
+  font-size: var(--badge-s-size);
+  color: var(--blue-primary);
+  font-family: var(--description);
+}

@@ -1,0 +1,1 @@
+{  "extends": ["standard", "plugin:react/recommended"],  "plugins": [    "react"  ],  "rules": {    "no-return-assign": 0,    "react/react-in-jsx-scope": 0,    "semi": [2, "always"],    "spaced-comment": 0,    "no-tabs": 0,    "object-curly-spacing": 0,    "indent": [2, "tab"]  }}

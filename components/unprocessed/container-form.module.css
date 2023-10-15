@@ -1,0 +1,35 @@
+.orYouAlso {
+  position: relative;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.sendUsYour {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--h2-size);
+  letter-spacing: -0.03em;
+  line-height: 120%;
+}
+.form,
+.title {
+  display: flex;
+  align-items: flex-start;
+}
+.title {
+  width: 36.88rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.form {
+  align-self: stretch;
+  background: linear-gradient(180deg, #004aad, #2772d7 51.61%, #4c98ff);
+  flex-direction: row;
+  padding: var(--padding-61xl) var(--padding-101xl) var(--padding-41xl);
+  justify-content: center;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--badge-s-size);
+  color: var(--neutral-white);
+  font-family: var(--description);
+}

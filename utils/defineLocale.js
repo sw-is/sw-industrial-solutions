@@ -1,0 +1,1 @@
+import getUserLocale from 'get-user-locale';export const defineUserLocale = () => {	const userLocale = getUserLocale();	if (userLocale === 'de-DE'){		return 'de';	}		return 'en-US';}

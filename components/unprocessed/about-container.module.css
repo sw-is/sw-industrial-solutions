@@ -1,0 +1,43 @@
+.whoWeAre {
+  position: relative;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.aSccCertified {
+  position: relative;
+  font-size: var(--h2-size);
+  letter-spacing: -0.03em;
+  line-height: 120%;
+  color: var(--neutral-black);
+}
+.title {
+  width: 36.88rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.about,
+.contentBlock,
+.title {
+  display: flex;
+  align-items: flex-start;
+}
+.contentBlock {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--gap-xl);
+  font-size: var(--h3-size);
+}
+.about {
+  width: 90.06rem;
+  flex-direction: column;
+  padding: var(--padding-61xl) var(--padding-101xl) var(--padding-101xl);
+  box-sizing: border-box;
+  justify-content: flex-start;
+  gap: var(--gap-41xl);
+  text-align: left;
+  font-size: var(--badge-s-size);
+  color: var(--blue-primary);
+  font-family: var(--description);
+}

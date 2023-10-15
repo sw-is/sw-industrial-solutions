@@ -1,0 +1,19 @@
+.button {
+  position: relative;
+  line-height: 160%;
+  font-weight: 500;
+}
+.statedefaultTypectaBase {
+  border-radius: var(--br-xl);
+  background-color: var(--neutral-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-xl) var(--padding-41xl);
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: var(--badge-s-size);
+  color: var(--gray-501);
+  font-family: var(--description);
+}

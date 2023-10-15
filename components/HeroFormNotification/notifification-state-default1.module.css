@@ -1,0 +1,31 @@
+.iconEMail {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.typeYourEMail {
+  position: relative;
+  line-height: 160%;
+  font-weight: 500;
+}
+.notifificationStatedefault {
+  border-radius: var(--br-xl);
+  background-color: var(--gray-100);
+  border: 0.5px solid var(--gray-300);
+  box-sizing: border-box;
+  height: 64px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding-base);
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-7xs);
+  text-align: left;
+  font-size: var(--badge-s-size);
+  color: var(--gray-500);
+  font-family: var(--description);
+  align-self: stretch;
+}
