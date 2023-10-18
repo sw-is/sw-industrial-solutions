@@ -1,10 +1,10 @@
 "use client";
 export const dynamic = "force-dynamic";
-//import {useQuery} from '@apollo/client';
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
-import {GET_CONTENT} from '../api/queries';
-import {defineUserLocale} from '../utils/defineLocale';
+
 import HeroSection from '../components/HeroSection/HeroSection';
+import Menu from '../components/Menu/Menu';
+import {getContent} from '../api/apolloClientContext';
+
 // import AboutContainer from '../components/unprocessed/about-container';
 // import IndustryDirectionsContainer from '../components/unprocessed/industry-directions-container';
 // import StateDefaultTypeCTABase2 from '../components/unprocessed/state-default-type-c-t-a-base2';
@@ -12,20 +12,18 @@ import HeroSection from '../components/HeroSection/HeroSection';
 // import ContainerForm from '../components/unprocessed/container-form';
 // import FormContainer from '../components/unprocessed/form-container';
 // import OnoffNoneFormatDesktop from '../components/Footer/onoff-none-format-desktop';
-import { ApolloWrapper } from "../lib/apollo-wrapper";
 
-const locale = defineUserLocale();
+
 function SWLandingPage() {
-	const {content} = useSuspenseQuery(GET_CONTENT, {
-		variables: { locale },
-	});
-
-	const globalItems = content?.globalsCollection?.items[0];
-    const heroItems = content?.topIntroductionCollection?.items[0];
-	console.log("-> data", );
+	const {loading, error} = getContent();
+	if (loading) return <div>Loading...</div>
+	if (error) return <div>Error: {error.message}</div>
 	return (
+		<>
+
 			<div className={'mainContainer'}>
-	102.				<HeroSection content={{globalItems, heroItems}}/>
+				<Menu/>
+				<HeroSection/>
 				{/*<div className={styles.landing}>*/}
 				{/*	<AboutContainer/>*/}
 				{/*	<IndustryDirectionsContainer/>*/}
@@ -157,6 +155,7 @@ function SWLandingPage() {
 				{/*		rectangleDivHeight="1.25rem"*/}
 				{/*/>*/}
 			</div>
+		</>
 	);
 };
 

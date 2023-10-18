@@ -39,60 +39,59 @@
   @include device(XXXL-screen){
     background-position: center calc(50% - 20vw);
   }
-}
 
-.content__title {
-  display: flex;
-  flex-direction: column;
-  gap: $gap-xl;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  padding: 0 10vw 0 10vw;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xl;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    padding: 0 10vw 0 10vw;
+    text-align: center;
+    position: relative;
 
-  text-align: center;
-  position: relative;
-  align-self: stretch;
-}
-.content__company-name {
-  @include line-height($badge-m-size);
-  font-size: $badge-m-size;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.content__header {
-  @include h1-header();
-}
-.content__text {
-  @include text-l();
-
-  p{
-    margin: 0;
   }
-}
+  &__companyName {
+    @include line-height($badge-m-size);
+    font-size: $badge-m-size;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__header {
+    @include h1-header();
+  }
+  &__text {
+    @include text-l();
+  }
+
+  &__scroll {
+    padding: $padding-21xl $padding-3xs;
+    display: flex;
+    flex-direction: row;
+    gap: $gap-9xs;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+
+    &-text {
+      text-align: center;
+      font-size: $text-s-size;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-icon {
+      flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+    }
+  }
 
 
-.content__scroll-down {
-  padding: $padding-21xl $padding-3xs;
-  display: flex;
-  flex-direction: row;
-  gap: $gap-9xs;
-  align-items: center;
-  justify-content: center;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
 }
-.content__scroll-text {
-  text-align: center;
-  font-size: $text-s-size;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.content__scroll-icon {
-  flex-shrink: 0;
-  position: relative;
-  overflow: visible;
-}
+

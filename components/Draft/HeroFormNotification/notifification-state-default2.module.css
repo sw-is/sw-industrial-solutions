@@ -51,7 +51,7 @@
 }
 .notificationSuccesserror {
   background-color: var(--notification-success-light);
-  display: none;
+  display: block;
   flex-direction: row;
   padding: var(--padding-11xs) var(--padding-xs);
   align-items: center;

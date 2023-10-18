@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import styles from "./notifification-state-default2.module.css";
+import styles from "components/Draft/HeroFormNotification/notifification-state-default2.module.css";
 
 const NotifificationStateDefault2 = ({
   iconEMail,

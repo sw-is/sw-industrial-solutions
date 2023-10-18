@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.m-localeSwitch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: $gap-11xs;
+
+  .a-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .a-button{
+    border-radius: $br-xl;
+    overflow: hidden;
+    padding:$padding-3xs $padding-5xs;
+    align-items: center;
+    justify-content: center;
+    line-height: 160%;
+    font-weight: 500;
+    white-space: nowrap;
+
+    &:hover{
+      background-color: $gray-300;
+    }
+  }
+  .-inactive{
+    color: $gray-500;
+    &:hover{
+      background-color: $gray-501;
+    }
+  }
+
+  .a-divider{
+    background-color: $gray-400;
+    width: 1px;
+    height: 20px;
+  }
+}
+
