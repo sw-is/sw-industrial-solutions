@@ -1,6 +1,20 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
+
+.m-contactUsButton{
+        border-radius: $br-5xl;
+        background-color: $neutral-black;
+        overflow: hidden;
+        padding: $padding-3xs $padding-5xl;
+        justify-content: center;
+        color: $gray-501;
+
+        &:hover{
+          background-color: $gray-700;
+        }
+      }
+
 .menu {
   top: 0;
   position: sticky;
@@ -19,7 +33,6 @@
 
 
   .o-content,
-  .buttonBase5,
   .m-leftBlock {
     display: flex;
     flex-direction: row;
@@ -28,10 +41,11 @@
 
   .o-content{
     width: 80vw;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     @include device(S-screen){
       width: 70vw;
+      justify-content: space-evenly;
     }
     .m-logo{
       margin: 0 7vw 0 2vw;
@@ -39,13 +53,16 @@
 
     .m-navigationBlock {
       display: flex;
-      flex-direction: row;
-    }
-
-    .m-navigationBlock {
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: $gap-21xl;
+      height: 100vh;
+
+      @include device(S-screen){
+           flex-direction: row;
+           height: auto;
+      }
     }
 
     .a-button{
@@ -64,20 +81,21 @@
         justify-content: flex-end;
         gap: $gap-21xl;
         margin: 0 2vw 0 3vw;
-
-
-      &--button{
-        border-radius: $br-5xl;
-        background-color: $neutral-black;
-        overflow: hidden;
-        padding: $padding-3xs $padding-5xl;
-        justify-content: center;
-        color: $gray-501;
-
-        &:hover{
-          background-color: $gray-700;
-        }
-      }
     }
+  }
+
+  .o-mobileContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-21xl;
+    height: 60vh;
+    width: 100%;
+    border-radius: 0px 0px $br-xl $br-xl;
+    box-shadow: 0px 10px 25px #33333314;
+    overflow: hidden;
+  
+   
   }
 }
