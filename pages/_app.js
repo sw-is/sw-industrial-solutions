@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Head from 'next/head';
 //import '../styles/global.css';
 import '../styles/index.scss';
-import {ApolloWrapper} from '../lib/apollo-wrapper';
+import {ApolloWrapper} from '../api/apollo-wrapper';
 import {ContentProvider} from '../api/apolloClientContext';
 import {defineUserLocale} from '../utils/localisation';
 

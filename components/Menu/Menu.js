@@ -5,7 +5,8 @@ import LocaleSwitch from '../LocaleSwitch/LocaleSwitch';
 function Menu() {
 
 
-  const [viewport, setViewport] = useState( 0)
+  const [viewport, setViewport] = useState(0);
+  const [mobileMenu, setMobileMenu] = useState(false);
   useEffect(()=>{
     setViewport(window.innerWidth)
     function handleViewportResize(){
@@ -21,43 +22,66 @@ function Menu() {
 
 
   return (
-      mobileDevice ?
-          <div className={styles['menu']}>
-            <div className={styles['o-content']}>
+    mobileDevice ?
+      <>
+        <div className={styles['menu']}>
+          <div className={styles['o-content']}>
             <img className={styles['m-logo']}
-                alt=""
-                src="/sw-logo-color.svg"
+                 alt=""
+                 src="/sw-logo-color.svg"
             />
-            </div>
+        
+              <button className={styles['a-button']} onClick={(()=> setMobileMenu(!mobileMenu))}>
+                {!mobileMenu ? 'Menu'  : 'Close' }
+              </button>
           </div>
-          :
-    <div className={styles['menu']}
-    >
-      <div className={styles['o-content']}>
-        <img className={styles['m-logo']}
-          alt=""
-          src="/sw-logo-color.svg"
-        />
-        <div className={styles['m-navigationBlock']}>
-          <button className={styles['a-button']}>
-              About
+
+          {mobileMenu ?
+
+
+         <div className={styles['o-mobileContent']}>
+           <button className={styles['a-button']}>
+            About
+            </button>
+            <button className={styles['a-button']}>
+            Services
+          </button>
+          <button className={styles['m-contactUsButton']}>
+            Contact Us
+          </button>
+          <LocaleSwitch/>
+        </div>
+
+: null }
+        </div>
+
+      </>
+      :
+      <div className={styles['menu']}
+      >
+        <div className={styles['o-content']}>
+          <img className={styles['m-logo']} alt="" src="/sw-logo-color.svg" />
+            <div className={styles['m-navigationBlock']}>
+            <button className={styles['a-button']}>
+            About
+            </button>
+            <button className={styles['a-button']}>
+            Services
           </button>
           <button className={styles['a-button']}>
-              Services
-          </button>
-          <button className={styles['a-button']}>
-              Contact
+            Contact
           </button>
         </div>
         <div className={styles['m-leftBlock']}>
-         <LocaleSwitch/>
-          <button className={styles['m-leftBlock--button']}>
+          <LocaleSwitch/>
+          <button className={styles['m-contactUsButton']}>
             Contact Us
           </button>
         </div>
       </div>
-    </div>
-  );
+</div>
+
+);
 }
 
 export default Menu;
