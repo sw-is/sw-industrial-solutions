@@ -15,7 +15,7 @@ function Menu () {
 
 	const swipeActions = useSwipeable({
 		onSwipeStart: () => toggleMobileMenu(),
-		onSwiped: () => toggleMobileMenu(),
+		//onSwiped: () => toggleMobileMenu(),
 	});
 
 
