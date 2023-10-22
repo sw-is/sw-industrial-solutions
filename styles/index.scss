@@ -46,7 +46,11 @@ button {
   cursor: pointer;
   white-space: nowrap;
   color: $neutral-black;
+  font-weight: 500;
+  line-height: 160%;
 }
+
+
   //
   //
   //.technologiesAndPrinciples {
@@ -270,16 +274,13 @@ button {
   //}
 
 
-
-
-
   .mainContainer {
     position: relative;
-    background-color: $neutral-white;
     width: 100%;
     height: 100%;
     text-align: center;
-    color: $blue-primary;
     font-family: $main;
+    color:  $neutral-black;
+    background-color: $neutral-white;
   }
 

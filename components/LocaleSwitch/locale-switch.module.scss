@@ -17,15 +17,7 @@
   }
 
   .a-button{
-    border-radius: $br-xl;
-    overflow: hidden;
-    padding:$padding-3xs $padding-5xs;
-    align-items: center;
-    justify-content: center;
-    line-height: 160%;
-    font-weight: 500;
-    white-space: nowrap;
-
+   @include btn;
     &:hover{
       background-color: $gray-300;
     }

@@ -59,10 +59,10 @@
     text-transform: uppercase;
   }
   &__header {
-    @include h1-header();
+    @include h1-header;
   }
   &__text {
-    @include text-l();
+    @include text-l;
   }
 
   &__scroll {
@@ -91,7 +91,6 @@
       overflow: visible;
     }
   }
-
 
 }
 
