@@ -83,7 +83,7 @@
     .a-contactUsButton{
       @include btn-large;
       @include btn-black;
-      @include btn-wide;
+      @include element-wide;
     }
   }
 }
