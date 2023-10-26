@@ -1,4 +1,6 @@
 "use client";
+import AboutSection from '../components/AboutSection/AboutSection';
+
 export const dynamic = "force-dynamic";
 
 import HeroSection from '../components/HeroSection/HeroSection';
@@ -24,8 +26,9 @@ function SWLandingPage() {
 			<div className={'mainContainer'}>
 				<Menu/>
 				<HeroSection/>
+				<AboutSection/>
 				{/*<div className={styles.landing}>*/}
-				{/*	<AboutContainer/>*/}
+
 				{/*	<IndustryDirectionsContainer/>*/}
 				{/*	<div className={styles.ourValues}>*/}
 				{/*		<div className={styles.title}>*/}

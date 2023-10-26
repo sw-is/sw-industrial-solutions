@@ -5,12 +5,16 @@
 .gradient {
   background: linear-gradient(180deg, #e8f2ff, #f4f9ff 55.8%, #fff);
   height: 74.81rem;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
 .content * {
   box-sizing: border-box;
 }
 .content {
+  //height: 100vh;
   background-image: url("/hero.svg");
   background-position: center calc(50% - 15vh);
   background-repeat: no-repeat;
@@ -24,13 +28,13 @@
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
   width: 100%;
-  z-index: 1;
+ // z-index: 0;
   @include device(tablet){
-    padding: 30vh 0 20vh 0;
+    padding: 20vh 0 20vh 0;
   }
   @include device(XXL-screen){
     background-position: center calc(50% - 15vw);
@@ -88,7 +92,6 @@
     &-icon {
       flex-shrink: 0;
       position: relative;
-      overflow: visible;
     }
   }
 

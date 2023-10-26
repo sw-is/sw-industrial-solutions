@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import styles from './menu.module.scss';
 import LocaleSwitch from '../LocaleSwitch/LocaleSwitch';
 import { useSwipeable } from 'react-swipeable';
+import {getContent} from '../../api/apolloClientContext';
 
 function Menu () {
 
 	const [viewport, setViewport] = useState(0);
 	const [mobileMenu, setMobileMenu] = useState(false);
-
+	const {globalItems} = getContent();
+	console.log('globalItems', globalItems);
 	const toggleMobileMenu = ()=> {
 		setMobileMenu(!mobileMenu)
 	}
@@ -54,13 +56,13 @@ function Menu () {
             <div className={styles['o-mobileMenu']} {...swipeActions}>
 						<div className={styles['m-navigationBlock']}>
 							<button className={styles['a-button']}>
-								About
+								{globalItems.menuAbout}
 							</button>
 							<button className={styles['a-button']}>
-								Services
+								{globalItems.menuServices}
 							</button>
 							<button className={styles['a-contactUsButton']}>
-								Contact Us
+								{globalItems.menuContact}
 							</button>
 							<LocaleSwitch />
 						</div>
@@ -76,19 +78,19 @@ function Menu () {
 					<img className={styles['m-logo']} alt="" src="/sw-logo-color.svg" />
 					<div className={styles['m-navigationBlock']}>
 						<button className={styles['a-button']}>
-							About
+							{globalItems.menuAbout}
 						</button>
 						<button className={styles['a-button']}>
-							Services
+							{globalItems.menuServices}
 						</button>
 						<button className={styles['a-button']}>
-							Contact
+							{globalItems.menuContact}
 						</button>
 					</div>
 					<div className={styles['m-leftBlock']}>
 						<LocaleSwitch />
 						<button className={styles['a-contactUsButton']}>
-							Contact Us
+							{globalItems.btnContactUs}
 						</button>
 					</div>
 				</div>

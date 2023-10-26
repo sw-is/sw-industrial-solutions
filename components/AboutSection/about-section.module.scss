@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.about {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $padding-61xl;
+
+
+  .o-content {
+    @include main-container;
+    gap: $gap-61xl;
+
+    .m-title{
+      flex-direction: column;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      gap: $gap-3xs;
+      text-align: left;
+
+      .a-sectionDescription {
+        @include section-description;
+      }
+      .a-sectionHeader {
+        @include h2-header;
+      }
+    }
+
+    .m-cards{
+      @include cards;
+    }
+  }
+}
+
+
+
