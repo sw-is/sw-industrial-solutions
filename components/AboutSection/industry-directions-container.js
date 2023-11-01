@@ -1,4 +1,4 @@
-import styles from "components/unprocessed/industry-directions-container.module.css";
+import styles from "components/AboutSection/industry-directions-container.module.css";
 
 const IndustryDirectionsContainer = () => {
   return (

@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+.card {
+  flex-direction: column;
+  padding: $padding-xl;
+  border-radius: $br-xl;
+  background: $gray-100;
+  align-items: center;
+  gap: $gap-3xs;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+
+  .a-icon {
+    height: 6rem;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+
+ .m-cardText{
+   text-align: center;
+   white-space: nowrap;
+
+   .a-header {
+     @include h3-header;
+   }
+ }
+
+}

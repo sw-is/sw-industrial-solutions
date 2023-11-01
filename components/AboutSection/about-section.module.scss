@@ -1,7 +1,7 @@
 @import "../../styles/variables";
 @import "../../styles/mixins";
 
-.about {
+.section-container {
   display: flex;
   justify-content: center;
   margin-bottom: $padding-61xl;
@@ -9,11 +9,10 @@
 
   .o-content {
     @include main-container;
-    gap: $gap-61xl;
+    gap: $gap-41xl;
 
     .m-title{
       flex-direction: column;
-      justify-content: flex-start;
       box-sizing: border-box;
       gap: $gap-3xs;
       text-align: left;
@@ -25,9 +24,24 @@
         @include h2-header;
       }
     }
+    .--align-center{
+      text-align: center;
+    }
 
-    .m-cards{
+    .m-experience-cards{
       @include cards;
+      gap:$gap-41xl;
+    }
+    .m-direction-cards{
+      @include cards;
+      gap:0.1rem;
+    }
+    .m-principles-cards{
+      @include cards;
+      flex-direction: row;
+      align-items: normal !important;
+      flex-wrap: wrap;
+      gap:$gap-41xl;
     }
   }
 }
