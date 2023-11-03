@@ -9,7 +9,7 @@ function Menu () {
 	const [viewport, setViewport] = useState(0);
 	const [mobileMenu, setMobileMenu] = useState(false);
 	const {globalItems} = getContent();
-	console.log('globalItems', globalItems);
+
 	const toggleMobileMenu = ()=> {
 		setMobileMenu(!mobileMenu)
 	}

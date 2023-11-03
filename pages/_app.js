@@ -2,9 +2,13 @@ import React, {useEffect, useState} from 'react';
 import Head from 'next/head';
 //import '../styles/global.css';
 import '../styles/index.scss';
+
+import {LocaleContext} from '../localisation/localeContext';
+import {defineUserLocale} from '../localisation/localisation';
 import {ApolloWrapper} from '../api/apollo-wrapper';
-import {ContentProvider} from '../api/apolloClientContext';
-import {defineUserLocale} from '../utils/localisation';
+import { ContentProvider } from '../api/apolloClientContext';
+
+
 
 if (typeof window !== 'undefined'){
 	defineUserLocale();
@@ -12,15 +16,18 @@ if (typeof window !== 'undefined'){
 
 function App ({Component, pageProps}) {
 	const [locale, setLocale] = useState('');
-	 useEffect(()=>{
-		 console.log('localStorage.getItem',localStorage.getItem('locale'))
-		 setLocale(localStorage.getItem('locale'));
-	},[])
+	useEffect(()=>{
+		console.log('localStorage.getItem',localStorage.getItem('locale'))
+		setLocale(localStorage.getItem('locale'));
+	},[locale]);
+
+	const localeContextProps = {locale, setLocale};
 
 	return (
-		locale === '' ? null :
+	<LocaleContext.Provider value={localeContextProps}>
 		<ApolloWrapper>
-			<ContentProvider locale={locale} setLocale={setLocale}>
+			<ContentProvider locale={locale}>
+
 			<Head>
 				<title>S.W. Industrial Solutions</title>
 				<meta
@@ -28,9 +35,12 @@ function App ({Component, pageProps}) {
 					content="minimum-scale=1, initial-scale=1, width=device-width"
 				/>
 			</Head>
+
 			<Component {...pageProps} />
-			</ContentProvider>
-		</ApolloWrapper>
+
+				</ContentProvider>
+			</ApolloWrapper>
+		</LocaleContext.Provider>
 	);
 }
 
