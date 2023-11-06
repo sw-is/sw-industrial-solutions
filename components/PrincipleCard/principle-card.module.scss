@@ -4,9 +4,7 @@
 
 .card {
   flex-direction: row;
-  //align-items: center;
   gap: $gap-xl;
-  //flex: 1 1 50%;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -20,9 +18,7 @@
   @include device(XXL-screen) {
     width: 48%;
   }
-  @include device(XXXL-screen) {
-    width: 49%;
-  }
+
 
   .a-icon {
     background-color: $gray-300;
@@ -30,22 +26,21 @@
     height: 100%;
   }
 
- .m-cardText{
-   text-align: left;
-   gap: $gap-xl;
-   display: flex;
-   flex-direction: column;
+  .m-cardText {
+    text-align: left;
+    gap: $gap-xl;
+    display: flex;
+    flex-direction: column;
 
-   .a-header {
-     @include h3-header;
-   }
+    .a-header {
+      @include h3-header;
+    }
 
-   .a-description {
-     @include section-description;
-     color: $neutral-black;
-     text-transform: none;
-     font-weight: 500;
-   }
- }
-
+    .a-description {
+      @include section-description;
+      color: $neutral-black;
+      text-transform: none;
+      font-weight: 500;
+    }
+  }
 }

@@ -13,7 +13,7 @@ const DirectionCard = ({
           src={icon}
         />
       <div className={styles['m-cardText']}>
-        <p className={styles['a-header']}>{direction}</p>
+        <h3 className={styles['a-header']}>{direction}</h3>
       </div>
     </div>
   );

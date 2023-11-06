@@ -1,4 +1,4 @@
-  {
+{
   "name": "sw_industrial_solutions",
   "proxy": "http://localhost:3001",
   "version": "0.1.0",
@@ -11,7 +11,9 @@
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.0",
     "react-router-dom": "^6.2.1",
+    "react-scroll": "^1.9.0",
     "react-swipeable": "^7.0.1"
   },
   "devDependencies": {

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import Head from 'next/head';
-//import '../styles/global.css';
 import '../styles/index.scss';
 
 import {LocaleContext} from '../localisation/localeContext';

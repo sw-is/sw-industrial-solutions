@@ -9,62 +9,62 @@ const AboutSection = () => {
   const {aboutItems} = getContent();
   return (
     <>
-    <div className={styles['section-container']}>
+    <section id="about" className={styles['section-container']}>
       <div className={styles['o-content']}>
         <div className={styles['m-title']}>
-          <p className={styles['a-sectionDescription']}>{aboutItems.sectionDescription1}</p>
-          <p className={styles['a-sectionHeader']}>{aboutItems.sectionHeader1}</p>
+          <h4 className={styles['a-sectionDescription']}>{aboutItems.sectionDescription1}</h4>
+          <h2 className={styles['a-sectionHeader']}>{aboutItems.sectionHeader1}</h2>
         </div>
         <div className={styles['m-experience-cards']}>
         <ExperienceCard
-          icon="/icon2.svg"
+          icon="/about-1.svg"
           experienceInfo={aboutItems.experienceInfo1}
           experienceDescription={aboutItems.experienceDescription1}
         />
         <ExperienceCard
-          icon="/icon3.svg"
+          icon="/about-2.svg"
           experienceInfo={aboutItems.experienceInfo2}
           experienceDescription={aboutItems.experienceDescription2}
         />
         <ExperienceCard
-          icon="/icon4.svg"
+          icon="/about-3.svg"
           experienceInfo={aboutItems.experienceInfo3}
           experienceDescription={aboutItems.experienceDescription3}
         />
         </div>
       </div>
-    </div>
-      <div className={styles['section-container']}>
+    </section>
+      <section className={styles['section-container']}>
         <div className={styles['o-content']}>
           <div className={`${styles['m-title']} ${styles['--align-center']}`}>
-            <p className={styles['a-sectionDescription']}>{aboutItems.sectionDescription2}</p>
-            <p className={styles['a-sectionHeader']}>{aboutItems.sectionHeader2}</p>
+            <h4 className={styles['a-sectionDescription']}>{aboutItems.sectionDescription2}</h4>
+            <h2 className={styles['a-sectionHeader']}>{aboutItems.sectionHeader2}</h2>
           </div>
           <div className={styles['m-direction-cards']}>
             <DirectionCard
-              icon="/direction-icon1.svg"
+              icon="/direction-1.svg"
               direction={aboutItems.direction1}
             />
             <DirectionCard
-              icon="/direction-icon2.svg"
+              icon="/direction-2.svg"
               direction={aboutItems.direction2}
             />
             <DirectionCard
-              icon="/direction-icon3.svg"
+              icon="/direction-3.svg"
               direction={aboutItems.direction3}
             />
             <DirectionCard
-              icon="/direction-icon4.svg"
+              icon="/direction-4.svg"
               direction={aboutItems.direction4}
             />
           </div>
         </div>
-      </div>
-      <div className={styles['section-container']}>
+      </section>
+      <section className={styles['section-container']}>
         <div className={styles['o-content']}>
           <div className={styles['m-title']}>
-            <p className={styles['a-sectionDescription']}>{aboutItems.sectionDescription3}</p>
-            <p className={styles['a-sectionHeader']}>{aboutItems.sectionHeader3}</p>
+            <h4 className={styles['a-sectionDescription']}>{aboutItems.sectionDescription3}</h4>
+            <h2 className={styles['a-sectionHeader']}>{aboutItems.sectionHeader3}</h2>
           </div>
           <div className={styles['m-principles-cards']}>
             <PrincipleCard
@@ -85,7 +85,7 @@ const AboutSection = () => {
             />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

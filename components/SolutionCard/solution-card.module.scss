@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  padding: $padding-21xl;
+  border-radius: $br-xl;
+  background: $neutral-black;
+  color: $neutral-white;
+  gap: $gap-3xs;
+  min-width: 100px;
+  height: 100%;
+  text-align: left;
+
+  .a-header {
+    @include h3-header;
+  }
+
+  .a-description {
+    @include section-description;
+    color: $neutral-white;
+    text-transform: none;
+    font-weight: 500;
+  }
+
+}

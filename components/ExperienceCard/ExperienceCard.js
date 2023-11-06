@@ -14,7 +14,7 @@ const ExperienceCard = ({
           src={icon}
         />
       <div className={styles['m-cardText']}>
-        <p className={styles['a-header']}>{experienceInfo}</p>
+        <h3 className={styles['a-header']}>{experienceInfo}</h3>
         <p className={styles['a-description']}>{experienceDescription}</p>
       </div>
     </div>

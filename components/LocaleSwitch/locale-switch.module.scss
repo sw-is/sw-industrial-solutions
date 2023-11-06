@@ -22,10 +22,25 @@
       background-color: $gray-300;
     }
   }
-  .-inactive{
+
+  .a-button.--darkMode{
+    color: $neutral-white;
+    &:hover{
+      color: $neutral-black;
+      @include btn-white;
+    }
+  }
+
+  .a-button.-inactive{
     color: $gray-500;
     &:hover{
       background-color: $gray-501;
+    }
+  }
+  .a-button.-inactive.--darkMode{
+    &:hover{
+      color: $neutral-black;
+      background-color: $neutral-white;
     }
   }
 
@@ -33,6 +48,9 @@
     background-color: $gray-400;
     width: 1px;
     height: 20px;
+  }
+  .a-divider.--darkMode{
+    background-color: $gray-500;
   }
 }
 

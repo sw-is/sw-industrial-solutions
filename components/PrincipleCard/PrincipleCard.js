@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import styles from "./principle-card.module.scss";
 
 const PrincipleCard = ({
@@ -11,7 +10,7 @@ const PrincipleCard = ({
           className={styles['a-icon']}
         />
       <div className={styles['m-cardText']}>
-        <p className={styles['a-header']}>{principle}</p>
+        <h3 className={styles['a-header']}>{principle}</h3>
         <p className={styles['a-description']}>{principleDescription}</p>
       </div>
     </div>
