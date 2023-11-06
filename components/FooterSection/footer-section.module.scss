@@ -1,0 +1,160 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  padding: $padding-41xl 0;
+  background: $neutral-black;
+  color: $neutral-white;
+
+  .o-container {
+    @include main-container;
+    gap: $gap-41xl;
+
+    .m-navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+
+      .o-content,
+      .m-leftBlock {
+        display: flex;
+        align-items: center;
+      }
+
+      .o-content {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        gap: $gap-21xl;
+        width: 100%;
+        color: $neutral-white;
+
+        @include device(S-screen-only) {
+          justify-content: space-evenly;
+          gap: 2vw;
+        }
+
+        @include device(L-screen) {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .m-logoContainer {
+          display: flex;
+          align-items: start;
+          width: 16.6rem;
+          @include device(L-screen) {
+            margin-right: 2rem;
+          }
+        }
+
+        .m-leftBlock {
+          gap: $gap-xl;
+          flex-direction: column;
+          align-items: start;
+          margin: 0;
+          justify-content: space-between;
+          width: 100%;
+          @include device(L-screen) {
+            padding-bottom: $padding-9xs;
+            align-items: center;
+          }
+
+          .m-navigationBlock {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+
+            @include device(tablet) {
+              height: auto;
+              //gap:  $gap-xl;
+            }
+
+            @include device(XL-screen) {
+              height: auto;
+              gap: $gap-21xl;
+            }
+
+            .a-button {
+              @include btn;
+              color: $neutral-white;
+            }
+          }
+
+          @include device(L-screen) {
+            flex-direction: row;
+            margin-left: 2rem;
+            width: 42rem;
+          }
+
+          .m-btnContainer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: $gap-5xs;
+
+            @include device(L-screen) {
+              width: auto;
+            }
+            @include device(XL-screen) {
+              gap: $gap-21xl;
+            }
+
+            .a-upButton {
+              @include btn-small;
+              @include btn-white;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+
+    .m-info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: $gap-3xs;
+      @include ctaText();
+
+      .m-infoContacts {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+        white-space: nowrap;
+        text-align: start;
+
+        @include device(L-screen) {
+          justify-content: space-between;
+          flex-direction: row;
+          gap: $gap-xl;
+        }
+        @include device(XL-screen) {
+          gap: $gap-21xl;
+        }
+
+        .a-address {
+          white-space: pre-wrap;
+          @include device(tablet) {
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .a-copyright {
+        @include text-xs;
+        color: $gray-300;
+      }
+    }
+  }
+}
+
+
+

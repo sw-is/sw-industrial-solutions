@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+.section-container {
+  display: flex;
+  justify-content: center;
+
+  .o-content {
+    @include main-container;
+    gap: $gap-41xl;
+
+    .m-title {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      gap: $gap-3xs;
+      text-align: left;
+      width: 90%;
+
+      @include device(S-screen) {
+        width: 550px;
+      }
+
+      .a-sectionDescription {
+        @include section-description;
+      }
+
+      .a-sectionHeader {
+        @include h2-header;
+      }
+    }
+
+
+    .m-contact-info-cards {
+      @include cards(2);
+      gap: $gap-xl;
+      @include device(L-screen) {
+        flex-wrap: unset;
+        gap: $gap-11xs;
+      }
+    }
+
+    .m-companyInfo {
+      flex-direction: column;
+      box-sizing: border-box;
+      gap: $gap-3xs;
+      text-align: left;
+
+      .a-address {
+      }
+
+      .a-licence {
+      }
+    }
+
+  }
+}
+
+
+

@@ -1,41 +1,42 @@
-import styles from './hero-section.module.scss';
-import HeroForm from '../HeroForm/HeroForm';
-import {getContent} from '../../api/apolloClientContext';
+import { Link } from "react-scroll";
+import ContactForm from "../ContactForm/ContactForm";
+import { getContent } from "../../api/apolloClientContext";
 
+import styles from "./hero-section.module.scss";
+function HeroSection () {
+  const { heroItems } = getContent();
 
-function HeroSection() {
-	const {heroItems} = getContent();
-
-	return (
-		<>
-			<div className={styles['gradient']}></div>
-			<div className={styles['content']}>
-				<div className={styles['content__container']}>
-					<h4 className={styles['content__companyName']}>
-						{heroItems.companyName}
-					</h4>
-
-						<h1	className={
-							styles['content__header']
-						}>
-							<span>{heroItems.mainHeaderLine1}</span>
-							<span>{heroItems.mainHeaderLine2}</span>
-
-						</h1>
-
-					<div className={styles['content__text']}>
-						<span>{heroItems.descriptionLine1}</span>
-						<span>{heroItems.descriptionLine2}</span>
-					</div>
-				</div>
-				<HeroForm/>
-				<div className={styles['content__scroll']}>
-					<div className={styles['content__scroll-text']}>{heroItems.scrollDown}</div>
-					<img className={styles['content__scroll-icon']} src="/icon1.svg"/>
-				</div>
-			</div>
-		</>
-	);
+  return (
+    <>
+      <div id="top" className={styles["gradient"]}></div>
+      <section className={styles["o-content"]}>
+        <div className={styles["o-content__container"]}>
+          <div className={styles["m-title"]}>
+            <h4 className={styles["a-companyName"]}>
+              {heroItems.companyName}
+            </h4>
+            <h1 className={
+              styles["a-sectionHeader"]
+            }>
+              <span>{heroItems.mainHeaderLine1}</span>
+              <span>{heroItems.mainHeaderLine2}</span>
+            </h1>
+            <div className={styles["a-sectionDescription"]}>
+              <p>{heroItems.descriptionLine1}</p>
+              <p>{heroItems.descriptionLine2}</p>
+            </div>
+          </div>
+          <ContactForm />
+          <Link  to="about" spy={true} smooth={true}>
+          <div className={styles["a-scrollCue"]}>
+            <button className={styles["a-scrollCue__text"]}>{heroItems.scrollDown}</button>
+            <img className={styles["a-scrollCue__icon"]} src="/scroll-down.svg" alt="" />
+          </div>
+          </Link>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default HeroSection;

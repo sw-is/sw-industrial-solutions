@@ -1,0 +1,91 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  padding: $padding-61xl 0 $padding-61xl 0;
+  background: $blue-primary;
+  align-self: stretch;
+  background: linear-gradient(180deg, #004aad, #2772d7 51.61%, #4c98ff);
+  flex-direction: row;
+  gap: $gap-xl;
+  font-size: $badge-s-size;
+  color: $neutral-white;
+
+
+  .o-content {
+    @include main-container;
+    gap: $gap-41xl;
+    @include device(L-screen) {
+      flex-direction: row;
+    }
+
+    .m-title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      text-align: left;
+      gap: $gap-3xs;
+      color: $neutral-white;
+
+      @include device(L-screen) {
+        width: 50%;
+      }
+
+      .a-sectionDescription {
+        @include section-description;
+        color: $neutral-white;
+      }
+
+      .a-sectionHeader {
+        @include h2-header;
+      }
+    }
+
+    .a-contactUsButton {
+      @include element-wide;
+      @include btn-large;
+      @include btn-black;
+      @include device(S-screen) {
+        width: auto;
+      }
+    }
+
+  }
+}
+
+
+.orYouAlso {
+  position: relative;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.sendUsYour {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--h2-size);
+  letter-spacing: -0.03em;
+  line-height: 120%;
+}
+
+.form,
+.title {
+  display: flex;
+  align-items: flex-start;
+}
+
+.title {
+  width: 36.88rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+
+.form {
+
+}
+
+

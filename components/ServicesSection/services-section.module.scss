@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.section-container {
+  display: flex;
+  justify-content: center;
+
+  .o-content {
+    @include main-container;
+    gap: $gap-41xl;
+    align-items: center;
+
+    .m-title{
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      gap: $gap-3xs;
+
+      .a-sectionDescription {
+        @include section-description;
+      }
+      .a-sectionHeader {
+        @include h2-header;
+      }
+    }
+    .--align-center{
+      text-align: center;
+    }
+
+    .m-services-cards{
+        @include cards(3);
+    }
+    .a-ctaText{
+      @include ctaText(gray);
+    }
+  }
+}
+
+
+

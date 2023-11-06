@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  padding: $padding-61xl 0 $padding-61xl 0;
+  background: $blue-primary;
+
+  .o-content {
+    @include main-container;
+    gap: $gap-xl;
+    align-items: center;
+
+    .m-title{
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      gap: $gap-3xs;
+      color: $neutral-white;
+
+      .a-sectionDescription {
+        @include section-description;
+        color: $neutral-white;
+      }
+      .a-sectionHeader {
+        @include h2-header;
+      }
+    }
+    .--align-center{
+      text-align: center;
+    }
+
+    .a-contactUsButton{
+      @include element-wide;
+      @include btn-large;
+      @include btn-black;
+      @include device(S-screen){
+        width: auto;
+      }
+    }
+
+  }
+}
+
+
+
