@@ -2,8 +2,8 @@ import {Link} from 'react-scroll';
 import {getContent} from '../../api/apolloClientContext';
 import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
 
-
 import styles from "./section-footer.module.scss";
+
 const NavBlock = () => {
 	const {globalItems} = getContent();
 	return(

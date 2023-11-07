@@ -7,16 +7,6 @@ export const LocaleContext = createContext({
 	setLocale:()=>{}
 });
 
-// export const LocaleProvider = ({children}) => {
-// 	console.log('localStorage.getItem',localStorage.getItem('locale'))
-//
-//
-//
-// 	return(
-// 		<LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>
-// 	);
-// }
-
 export const useLocaleContext = () => {
 	return useContext(LocaleContext).locale;
 }

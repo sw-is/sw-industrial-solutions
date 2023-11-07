@@ -3,6 +3,7 @@ import FormContact from "../FormContact/FormContact";
 import { getContent } from "../../api/apolloClientContext";
 
 import styles from "./section-hero.module.scss";
+
 function SectionHero () {
   const { heroItems } = getContent();
 

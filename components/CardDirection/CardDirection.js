@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import styles from "./card-direction.module.scss";
 
 const CardDirection = ({

@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import styles from "./card-experience.module.scss";
 
 const CardExperience = ({
