@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import ContactForm from "../ContactForm/ContactForm";
+import FormContact from "../FormContact/FormContact";
 import { getContent } from "../../api/apolloClientContext";
 
 import styles from "./hero-section.module.scss";
@@ -26,7 +26,7 @@ function HeroSection () {
               <p>{heroItems.descriptionLine2}</p>
             </div>
           </div>
-          <ContactForm />
+          <FormContact />
           <Link  to="about" spy={true} smooth={true}>
           <div className={styles["a-scrollCue"]}>
             <button className={styles["a-scrollCue__text"]}>{heroItems.scrollDown}</button>

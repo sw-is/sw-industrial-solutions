@@ -11,8 +11,10 @@
   background: $gray-100;
   border-radius: $br-xl;
   height: fit-content;
+  
 
   @include device(L-screen) {
+    height:100%;
     width: 46%;
   }
   @include device(XL-screen) {

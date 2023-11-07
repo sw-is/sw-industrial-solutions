@@ -1,8 +1,9 @@
 import ContactInfoCard from "../ContactInfoCard/ContactInfoCard";
-import styles from "./contact-section.module.scss";
 import { getContent } from "../../api/apolloClientContext";
 
-const ContactSection = () => {
+import styles from "./contact-section.module.scss";
+
+const SectionContact = () => {
   const { globalItems, contactsItems } = getContent();
   return (
     <section id="contact" className={styles["section-container"]}>
@@ -52,4 +53,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default SectionContact;

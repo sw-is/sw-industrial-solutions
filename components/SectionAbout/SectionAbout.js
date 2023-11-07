@@ -1,19 +1,23 @@
 import ExperienceCard from "../ExperienceCard/ExperienceCard";
 import DirectionCard from '../DirectionCard/DirectionCard';
 import PrincipleCard from '../PrincipleCard/PrincipleCard';
-import styles from "./about-section.module.scss";
 import {getContent} from '../../api/apolloClientContext';
 
+import styles from "./section-about.module.scss";
 
-const AboutSection = () => {
+const SectionAbout = () => {
   const {aboutItems} = getContent();
   return (
     <>
     <section id="about" className={styles['section-container']}>
       <div className={styles['o-content']}>
         <div className={styles['m-title']}>
-          <h4 className={styles['a-sectionDescription']}>{aboutItems.sectionDescription1}</h4>
-          <h2 className={styles['a-sectionHeader']}>{aboutItems.sectionHeader1}</h2>
+          <h4 className={styles['a-sectionDescription']}>
+          {aboutItems.sectionDescription1}
+          </h4>
+          <h2 className={styles['a-sectionHeader']}>
+          {aboutItems.sectionHeader1}
+          </h2>
         </div>
         <div className={styles['m-experience-cards']}>
         <ExperienceCard
@@ -37,8 +41,12 @@ const AboutSection = () => {
       <section className={styles['section-container']}>
         <div className={styles['o-content']}>
           <div className={`${styles['m-title']} ${styles['--align-center']}`}>
-            <h4 className={styles['a-sectionDescription']}>{aboutItems.sectionDescription2}</h4>
-            <h2 className={styles['a-sectionHeader']}>{aboutItems.sectionHeader2}</h2>
+            <h4 className={styles['a-sectionDescription']}>
+            {aboutItems.sectionDescription2}
+            </h4>
+            <h2 className={styles['a-sectionHeader']}>
+            {aboutItems.sectionHeader2}
+            </h2>
           </div>
           <div className={styles['m-direction-cards']}>
             <DirectionCard
@@ -63,8 +71,12 @@ const AboutSection = () => {
       <section className={styles['section-container']}>
         <div className={styles['o-content']}>
           <div className={styles['m-title']}>
-            <h4 className={styles['a-sectionDescription']}>{aboutItems.sectionDescription3}</h4>
-            <h2 className={styles['a-sectionHeader']}>{aboutItems.sectionHeader3}</h2>
+            <h4 className={styles['a-sectionDescription']}>
+            {aboutItems.sectionDescription3}
+            </h4>
+            <h2 className={styles['a-sectionHeader']}>
+            {aboutItems.sectionHeader3}
+            </h2>
           </div>
           <div className={styles['m-principles-cards']}>
             <PrincipleCard
@@ -90,4 +102,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default SectionAbout;

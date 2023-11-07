@@ -3,11 +3,11 @@
 import {getContent} from '../api/apolloClientContext';
 import MenuSection from '../components/MenuSection/MenuSection';
 import HeroSection from '../components/HeroSection/HeroSection';
-import AboutSection from '../components/AboutSection/AboutSection';
-import CallToActionSection from '../components/CallToActionSection/CallToActionSection';
+import SectionAbout from '../components/SectionAbout/SectionAbout';
+import SectionCallToAction from '../components/SectionCallToAction/SectionCallToAction';
 import ServicesSection from '../components/ServicesSection/ServicesSection';
-import ContactSection from '../components/ContactSection/ContactSection';
-import ContactFormSection from '../components/ContactFormSection/ContactFormSection';
+import SectionContact from '../components/SectionContact/SectionContact';
+import SectionContactForm from '../components/SectionContactForm/SectionContactForm';
 import FooterSection from '../components/FooterSection/FooterSection';
 
 function SWLandingLayout() {
@@ -20,12 +20,12 @@ function SWLandingLayout() {
 		<div className={'mainContainer'}>
 			<MenuSection/>
 			<HeroSection/>
-			<AboutSection/>
-			<CallToActionSection/>
+			<SectionAbout/>
+		   <SectionCallToAction/>
 			<ServicesSection/>
-			<ContactSection/>
-			<ContactFormSection/>
-			<FooterSection/>
+			<SectionContact/>
+			<SectionContactForm/>
+	<FooterSection/>
 		</div>
 	);
 }

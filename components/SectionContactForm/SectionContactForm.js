@@ -1,8 +1,9 @@
 import { getContent } from "../../api/apolloClientContext";
-import ContactForm from "../ContactForm/ContactForm";
+import FormContact from "../FormContact/FormContact";
 
-import styles from "./contact-form-section.module.scss";
-const ContactFormSection = () => {
+import styles from "./section-contact-form.module.scss";
+
+const SectionContactForm = () => {
   const { globalItems } = getContent();
 
   return (
@@ -16,10 +17,10 @@ const ContactFormSection = () => {
             {globalItems.blueCallToActionHeader2}
           </h2>
         </div>
-        <ContactForm withMessage={true} />
+        <FormContact withMessage={true} />
       </div>
     </section>
   );
 };
-export default ContactFormSection;
+export default SectionContactForm;
 

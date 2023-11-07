@@ -1,9 +1,9 @@
 import { Link } from "react-scroll";
 import { getContent } from "../../api/apolloClientContext";
 
-import styles from "./call-to-action-section.module.scss";
+import styles from "./section-call-to-action.module.scss";
 
-const CallToActionSection = () => {
+const SectionCallToAction = () => {
   const { globalItems } = getContent();
 
   return (
@@ -27,4 +27,4 @@ const CallToActionSection = () => {
 
   );
 };
-export default CallToActionSection;
+export default SectionCallToAction;
