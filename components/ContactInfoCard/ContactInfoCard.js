@@ -18,6 +18,8 @@ const ContactInfoCard = ({
   const [showCV, setShowCV] = useState(false);
   return (
     <div className={styles.card}>
+      <div className={styles['o-visibleCard']}>
+
       <div className={styles['m-person']}>
         <h3 className={styles['a-name']}>{name}</h3>
         <p className={styles['a-position']}>{position}</p>
@@ -51,6 +53,7 @@ const ContactInfoCard = ({
         alt=""
         src="/showCV.svg"/>
       </button>
+      </div>
       {showCV &&
         <article className={styles['m-CV']}>
           <div className={styles['a-block']}>

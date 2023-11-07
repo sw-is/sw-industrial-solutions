@@ -5,16 +5,15 @@
   display: flex;
   padding: 1.25rem;
   flex-direction: column;
-  gap:$gap-xl;
   align-items: flex-start;
   flex-shrink: 0;
   background: $gray-100;
   border-radius: $br-xl;
   height: fit-content;
-  
+  gap:$gap-21xl;
+
 
   @include device(L-screen) {
-    height:100%;
     width: 46%;
   }
   @include device(XL-screen) {
@@ -24,77 +23,86 @@
     width: 48%;
   }
 
-  .m-person{
+  .o-visibleCard {
     display: flex;
     flex-direction: column;
-    gap:$gap-9xs;
-    align-items: start;
+    gap:$gap-xl;
 
-    .a-name{
-      @include h3-header;
-    }
-    .a-position{
-      @include section-description;
-      text-transform: none;
-      font-weight: 500;
-    }
-  }
-
-  .m-contacts{
-    display: flex;
-    flex-wrap: wrap;
-    gap: $gap-3xs;
-    padding-bottom:$padding-3xs;
-    width: 100%;
-
-    @media only screen and (min-width: 560px) {
-      gap:$gap-21xl;
-    }
-    @include device(L-screen){
-      gap:$gap-3xs;
-      justify-content: space-between;
-    }
-    @include device(XL-screen){
-      gap: $gap-21xl;
-      justify-content: unset;
-    }
-    .a-phoneInfo{
+    .m-person {
       display: flex;
-      align-items: center;
-      gap:$gap-3xs;
+      flex-direction: column;
+      gap: $gap-9xs;
+      align-items: start;
 
-      .a-phoneInfo__number{
-        white-space: nowrap;
+      .a-name {
+        @include h3-header;
+      }
+
+      .a-position {
+        @include section-description;
+        text-transform: none;
+        font-weight: 500;
       }
     }
-    .a-emailInfo{
-      display: flex;
-      align-items: center;
-      gap:$gap-3xs;
 
-      .a-emailInfo__email{
-        white-space: nowrap;
+    .m-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $gap-3xs;
+      padding-bottom: $padding-3xs;
+      width: 100%;
+
+      @media only screen and (min-width: 560px) {
+        gap: $gap-21xl;
+      }
+      @include device(L-screen) {
+        gap: $gap-3xs;
+        justify-content: space-between;
+      }
+      @include device(XL-screen) {
+        gap: $gap-21xl;
+        justify-content: unset;
+      }
+
+      .a-phoneInfo {
+        display: flex;
+        align-items: center;
+        gap: $gap-3xs;
+
+        .a-phoneInfo__number {
+          white-space: nowrap;
+        }
+      }
+
+      .a-emailInfo {
+        display: flex;
+        align-items: center;
+        gap: $gap-3xs;
+
+        .a-emailInfo__email {
+          white-space: nowrap;
+        }
       }
     }
-  }
 
-  .a-CVButton{
-    @include element-wide;
-    @include btn-large;
-    @include btn-blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:$gap-9xs;
+    .a-CVButton {
+      @include element-wide;
+      @include btn-large;
+      @include btn-blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $gap-9xs;
 
-    @include device(tablet){
-      @include btn-small;
-      width: auto;
-    }
+      @include device(tablet) {
+        @include btn-small;
+        width: min-content;
+      }
 
-    &__Icon{
-      &--fold{
-        transform: rotate(180deg);
+      &__Icon {
+        &--fold {
+          transform: rotate(180deg);
+        }
       }
     }
   }
@@ -120,3 +128,9 @@
      }
    }
   }
+
+.card:has(> .m-CV) {
+  @include device(L-screen) {
+    height:94%;
+  }
+}

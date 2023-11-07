@@ -10,24 +10,48 @@ import styles from "./menu-section.module.scss";
 const NavBlock = ({ mobileDevice }) => {
   const { globalItems } = getContent();
   return (
-    <nav className={styles["m-navigationBlock"]}>
-      <Link to="about" spy={true} smooth={true}>
-        <button className={styles["a-button"]}>
-          {globalItems.menuAbout}
-        </button>
-      </Link>
-      <Link to="services" spy={true} smooth={true}>
-        <button className={styles["a-button"]}>
-          {globalItems.menuServices}
-        </button>
-      </Link>
-      <Link to="contact" spy={true} smooth={true}>
-        <button className={styles["a-button"]}>
-          {globalItems.menuContact}
-        </button>
-      </Link>
-      {mobileDevice && <LocaleSwitch />}
-    </nav>
+    <>
+      { mobileDevice?
+          <nav className={styles["m-navigationBlock"]}>
+            <div className={styles["m-navigationBlock__container"]}>
+              <Link to="about" spy={true} smooth={true}>
+                <button className={styles["a-button"]}>
+                  {globalItems.menuAbout}
+                </button>
+              </Link>
+              <Link to="services" spy={true} smooth={true}>
+                <button className={styles["a-button"]}>
+                  {globalItems.menuServices}
+                </button>
+              </Link>
+            <Link to="contact" spy={true} smooth={true}>
+              <button className={styles["a-contactUsButton"]}>
+              {globalItems.btnContactUs}
+              </button>
+          </Link>
+            </div>
+        <LocaleSwitch mobileMenu={true} />
+       </nav>
+      :
+          <nav className={styles["m-navigationBlock"]}>
+              <Link to="about" spy={true} smooth={true}>
+                <button className={styles["a-button"]}>
+                  {globalItems.menuAbout}
+                </button>
+              </Link>
+              <Link to="services" spy={true} smooth={true}>
+                <button className={styles["a-button"]}>
+                  {globalItems.menuServices}
+                </button>
+              </Link>
+              <Link to="contact" spy={true} smooth={true}>
+                <button className={styles["a-button"]}>
+                  {globalItems.menuContact}
+                </button>
+              </Link>
+          </nav>
+      }
+  </>
   );
 };
 
@@ -42,7 +66,6 @@ function MenuSection () {
 
   const swipeActions = useSwipeable({
     onSwipeStart: () => toggleMobileMenu()
-    //onSwiped: () => toggleMobileMenu(),
   });
 
   useEffect(() => {
@@ -61,7 +84,7 @@ function MenuSection () {
             />
           </div>
 
-          <button className={styles["a-button"]} onClick={toggleMobileMenu}>
+          <button className={styles["a-button-menu"]} onClick={toggleMobileMenu}>
             {!mobileMenu ? "Menu" : "Close"}
           </button>
         </div>
@@ -89,7 +112,6 @@ function MenuSection () {
           </div>
         </div>
       </section>
-
   );
 }
 

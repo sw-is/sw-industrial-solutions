@@ -84,6 +84,12 @@
             .a-button {
               @include btn;
               color: $neutral-white;
+              &:hover{
+                color:$gray-100;
+              }
+              &:active{
+                color: $gray-400;
+              }
             }
           }
 

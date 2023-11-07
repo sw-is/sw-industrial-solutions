@@ -5,6 +5,15 @@
 .section-container {
   display: flex;
   justify-content: center;
+  padding-top: 0;
+
+  @media only screen and (min-width: 1240px) {
+    padding-top: $padding-21xl;
+  }
+
+  @media only screen and (min-width: 1350px) {
+    padding-top: 5vw;
+  }
 
   .o-content {
     @include main-container;

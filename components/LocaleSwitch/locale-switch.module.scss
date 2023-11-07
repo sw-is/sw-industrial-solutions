@@ -26,17 +26,18 @@
   .a-button.--darkMode{
     color: $neutral-white;
     &:hover{
-      color: $neutral-black;
-      @include btn-white;
+      color: $gray-400;
+      background-color: $gray-600;
+
     }
   }
-
   .a-button.-inactive{
     color: $gray-500;
     &:hover{
       background-color: $gray-501;
     }
   }
+
   .a-button.-inactive.--darkMode{
     &:hover{
       color: $neutral-black;
@@ -51,6 +52,11 @@
   }
   .a-divider.--darkMode{
     background-color: $gray-500;
+  }
+
+  .a-button.--mobileMenu{
+    font-size: $text-l-size;
+    padding: $padding-xl;
   }
 }
 
