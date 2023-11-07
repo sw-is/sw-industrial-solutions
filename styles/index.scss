@@ -76,6 +76,15 @@ section {
 
 textarea {
   resize: none;
+  border: none;
+}
+
+input{
+  border: none;
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }
 
 ul{
@@ -90,9 +99,7 @@ li {
   padding-inline-start: 1ch;
 }
 
-textarea:focus, input:focus{
-  outline: none;
-}
+
 
 .mainContainer {
   position: relative;

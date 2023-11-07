@@ -33,7 +33,7 @@
 
   .m-logoContainer{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     width: 16.6rem;
     @include device(S-screen){
       margin-right: 2rem;

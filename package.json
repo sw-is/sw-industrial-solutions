@@ -6,6 +6,7 @@
   "dependencies": {
     "@apollo/client": "^3.8.0-rc.2",
     "@apollo/experimental-nextjs-app-support": "^0.4.3",
+    "@emailjs/browser": "^3.11.0",
     "get-user-locale": "^2.3.0",
     "graphql": "^16.8.1",
     "next": "^13.2.4",

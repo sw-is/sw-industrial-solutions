@@ -16,7 +16,6 @@ if (typeof window !== 'undefined'){
 function App ({Component, pageProps}) {
 	const [locale, setLocale] = useState('');
 	useEffect(()=>{
-		console.log('localStorage.getItem',localStorage.getItem('locale'))
 		setLocale(localStorage.getItem('locale'));
 	},[locale]);
 
