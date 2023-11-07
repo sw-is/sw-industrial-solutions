@@ -5,7 +5,7 @@ import { useSwipeable } from "react-swipeable";
 import { getContent } from "../../api/apolloClientContext";
 import resizeListener from "../../utils/resizeListener";
 
-import styles from "./menu-section.module.scss";
+import styles from "./section-menu.module.scss";
 
 const NavBlock = ({ mobileDevice }) => {
   const { globalItems } = getContent();
@@ -55,7 +55,7 @@ const NavBlock = ({ mobileDevice }) => {
   );
 };
 
-function MenuSection () {
+function SectionMenu () {
   const [viewport, setViewport] = useState(0);
   const [mobileMenu, setMobileMenu] = useState(false);
   const { globalItems } = getContent();
@@ -115,4 +115,4 @@ function MenuSection () {
   );
 }
 
-export default MenuSection;
+export default SectionMenu;

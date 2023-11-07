@@ -1,4 +1,4 @@
-import ContactInfoCard from "../ContactInfoCard/ContactInfoCard";
+import CardContactInfo from "../CardContactInfo/CardContactInfo";
 import { getContent } from "../../api/apolloClientContext";
 
 import styles from "./contact-section.module.scss";
@@ -17,7 +17,7 @@ const SectionContact = () => {
           </h2>
         </div>
         <div className={styles["m-contact-info-cards"]}>
-          <ContactInfoCard
+          <CardContactInfo
             name={contactsItems.name1}
             position={contactsItems.position1}
             phone={contactsItems.phone1}
@@ -28,7 +28,7 @@ const SectionContact = () => {
             cardContent2={contactsItems.cardContent12}
             additionalInfo={contactsItems.additionalInfo1}
           />
-          <ContactInfoCard
+          <CardContactInfo
             name={contactsItems.name2}
             position={contactsItems.position2}
             phone={contactsItems.phone2}

@@ -2,8 +2,8 @@ import { Link } from "react-scroll";
 import FormContact from "../FormContact/FormContact";
 import { getContent } from "../../api/apolloClientContext";
 
-import styles from "./hero-section.module.scss";
-function HeroSection () {
+import styles from "./section-hero.module.scss";
+function SectionHero () {
   const { heroItems } = getContent();
 
   return (
@@ -39,4 +39,4 @@ function HeroSection () {
   );
 }
 
-export default HeroSection;
+export default SectionHero;

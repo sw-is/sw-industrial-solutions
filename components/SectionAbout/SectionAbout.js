@@ -1,6 +1,6 @@
-import ExperienceCard from "../ExperienceCard/ExperienceCard";
-import DirectionCard from '../DirectionCard/DirectionCard';
-import PrincipleCard from '../PrincipleCard/PrincipleCard';
+import CardExperience from "../CardExperience/CardExperience";
+import CardDirection from '../CardDirection/CardDirection';
+import CardPrinciple from '../CardPrinciple/CardPrinciple';
 import {getContent} from '../../api/apolloClientContext';
 
 import styles from "./section-about.module.scss";
@@ -20,17 +20,17 @@ const SectionAbout = () => {
           </h2>
         </div>
         <div className={styles['m-experience-cards']}>
-        <ExperienceCard
+        <CardExperience
           icon="/about-1.svg"
           experienceInfo={aboutItems.experienceInfo1}
           experienceDescription={aboutItems.experienceDescription1}
         />
-        <ExperienceCard
+        <CardExperience
           icon="/about-2.svg"
           experienceInfo={aboutItems.experienceInfo2}
           experienceDescription={aboutItems.experienceDescription2}
         />
-        <ExperienceCard
+        <CardExperience
           icon="/about-3.svg"
           experienceInfo={aboutItems.experienceInfo3}
           experienceDescription={aboutItems.experienceDescription3}
@@ -49,19 +49,19 @@ const SectionAbout = () => {
             </h2>
           </div>
           <div className={styles['m-direction-cards']}>
-            <DirectionCard
+            <CardDirection
               icon="/direction-1.svg"
               direction={aboutItems.direction1}
             />
-            <DirectionCard
+            <CardDirection
               icon="/direction-2.svg"
               direction={aboutItems.direction2}
             />
-            <DirectionCard
+            <CardDirection
               icon="/direction-3.svg"
               direction={aboutItems.direction3}
             />
-            <DirectionCard
+            <CardDirection
               icon="/direction-4.svg"
               direction={aboutItems.direction4}
             />
@@ -79,19 +79,19 @@ const SectionAbout = () => {
             </h2>
           </div>
           <div className={styles['m-principles-cards']}>
-            <PrincipleCard
+            <CardPrinciple
               principle={aboutItems.principle1}
               principleDescription={aboutItems.principleDescription1}
             />
-            <PrincipleCard
+            <CardPrinciple
               principle={aboutItems.principle2}
               principleDescription={aboutItems.principleDescription2}
             />
-            <PrincipleCard
+            <CardPrinciple
               principle={aboutItems.principle3}
               principleDescription={aboutItems.principleDescription3}
             />
-            <PrincipleCard
+            <CardPrinciple
               principle={aboutItems.principle4}
               principleDescription={aboutItems.principleDescription4}
             />

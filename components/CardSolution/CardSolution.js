@@ -1,6 +1,6 @@
-import styles from "./solution-card.module.scss";
+import styles from "./card-solution.module.scss";
 
-const SolutionCard = ({
+const CardSolution = ({
   header,
   description,
 }) => {
@@ -12,4 +12,4 @@ const SolutionCard = ({
   );
 };
 
-export default SolutionCard;
+export default CardSolution;

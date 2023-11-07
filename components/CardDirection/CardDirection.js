@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import styles from "./direction-card.module.scss";
+import styles from "./card-direction.module.scss";
 
-const DirectionCard = ({
+const CardDirection = ({
   icon,
   direction,
 }) => {
@@ -19,4 +19,4 @@ const DirectionCard = ({
   );
 };
 
-export default DirectionCard;
+export default CardDirection;

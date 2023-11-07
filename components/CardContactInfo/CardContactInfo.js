@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 
-import styles from "./contact-info-card.module.scss";
+import styles from "./card-contact-info.module.scss";
 
-const ContactInfoCard = ({
+const CardContactInfo = ({
   name,
   position,
   phone,
@@ -80,4 +80,4 @@ const ContactInfoCard = ({
   );
 };
 
-export default ContactInfoCard;
+export default CardContactInfo;

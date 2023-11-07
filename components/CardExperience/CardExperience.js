@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import styles from "./experience-card.module.scss";
+import styles from "./card-experience.module.scss";
 
-const ExperienceCard = ({
+const CardExperience = ({
   icon,
   experienceInfo,
   experienceDescription,
@@ -21,4 +21,4 @@ const ExperienceCard = ({
   );
 };
 
-export default ExperienceCard;
+export default CardExperience;

@@ -3,7 +3,7 @@ import {getContent} from '../../api/apolloClientContext';
 import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
 
 
-import styles from "./footer-section.module.scss";
+import styles from "./section-footer.module.scss";
 const NavBlock = () => {
 	const {globalItems} = getContent();
 	return(
@@ -26,7 +26,7 @@ const NavBlock = () => {
 		</nav>
 	)
 };
-const FooterSection = () => {
+const SectionFooter = () => {
 	const {globalItems} = getContent();
 	const year= new Date().getFullYear();
 
@@ -74,4 +74,4 @@ const FooterSection = () => {
 		</footer>
 	);
 };
-export default FooterSection;
+export default SectionFooter;

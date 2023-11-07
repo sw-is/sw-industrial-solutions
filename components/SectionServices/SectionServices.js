@@ -1,9 +1,9 @@
 import { getContent } from "../../api/apolloClientContext";
-import SolutionCard from "../SolutionCard/SolutionCard";
+import CardSolution from "../CardSolution/CardSolution";
 
-import styles from "./services-section.module.scss";
+import styles from "./section-services.module.scss";
 
-const ServicesSection = () => {
+const SectionServices = () => {
   const { servicesItems } = getContent();
   return (
     <section id="services" className={styles["section-container"]}>
@@ -17,15 +17,15 @@ const ServicesSection = () => {
           </h2>
         </div>
         <div className={styles["m-services-cards"]}>
-          <SolutionCard
+          <CardSolution
             description={servicesItems.cardDescription1}
             header={servicesItems.cardHeader1}
           />
-          <SolutionCard
+          <CardSolution
             description={servicesItems.cardDescription2}
             header={servicesItems.cardHeader2}
           />
-          <SolutionCard
+          <CardSolution
             description={servicesItems.cardDescription3}
             header={servicesItems.cardHeader3}
           />
@@ -38,4 +38,4 @@ const ServicesSection = () => {
   );
 };
 
-export default ServicesSection;
+export default SectionServices;

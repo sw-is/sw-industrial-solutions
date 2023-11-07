@@ -1,6 +1,6 @@
-import styles from "./principle-card.module.scss";
+import styles from "./card-principle.module.scss";
 
-const PrincipleCard = ({
+const CardPrinciple = ({
   principle,
   principleDescription,
 }) => {
@@ -17,4 +17,4 @@ const PrincipleCard = ({
   );
 };
 
-export default PrincipleCard;
+export default CardPrinciple;

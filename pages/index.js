@@ -3,14 +3,14 @@
 import React from 'react';
 import { RingLoader } from "react-spinners";
 import {getContent} from '../api/apolloClientContext';
-import MenuSection from '../components/MenuSection/MenuSection';
-import HeroSection from '../components/HeroSection/HeroSection';
+import SectionMenu from '../components/SectionMenu/SectionMenu';
+import SectionHero from '../components/SectionHero/SectionHero';
 import SectionAbout from '../components/SectionAbout/SectionAbout';
 import SectionCallToAction from '../components/SectionCallToAction/SectionCallToAction';
-import ServicesSection from '../components/ServicesSection/ServicesSection';
+import SectionServices from '../components/SectionServices/SectionServices';
 import SectionContact from '../components/SectionContact/SectionContact';
 import SectionContactForm from '../components/SectionContactForm/SectionContactForm';
-import FooterSection from '../components/FooterSection/FooterSection';
+import SectionFooter from '../components/SectionFooter/SectionFooter'
 
 
 function SWLandingLayout() {
@@ -27,14 +27,14 @@ function SWLandingLayout() {
 
 	return (
 		<div className={'mainContainer'}>
-			<MenuSection/>
-			<HeroSection/>
+			<SectionMenu/>
+			<SectionHero/>
 			<SectionAbout/>
 		   <SectionCallToAction/>
-			<ServicesSection/>
+			<SectionServices/>
 			<SectionContact/>
 			<SectionContactForm/>
-	<FooterSection/>
+	       <SectionFooter/>
 		</div>
 	);
 }
