@@ -27,7 +27,6 @@
   .a-button.--darkMode{
     color: $neutral-white;
     &:hover{
-      color: $gray-400;
       background-color: $gray-600;
 
     }
@@ -35,7 +34,7 @@
   .a-button.-inactive{
     color: $gray-500;
     &:hover{
-      background-color: $gray-501;
+      background-color: $gray-200;
     }
   }
 
