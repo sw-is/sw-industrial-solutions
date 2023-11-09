@@ -18,6 +18,7 @@
 
   .a-button{
    @include btn;
+    border-radius: 2.25rem;
     &:hover{
       background-color: $gray-300;
     }
