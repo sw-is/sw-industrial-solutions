@@ -60,10 +60,10 @@ button {
   line-height: 160%;
   -webkit-tap-highlight-color: transparent;
   &:hover{
-    color:$gray-600;
+    color:$gray-500;
   }
   &:active{
-    color: $gray-500;
+    color: $gray-400;
   }
 }
 
