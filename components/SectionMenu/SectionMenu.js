@@ -55,6 +55,14 @@ const NavBlock = ({ mobileDevice }) => {
   );
 };
 
+const Logo = () =>  <div className={styles["m-logoContainer"]}><Link  to="top" spy={true} smooth={true}>
+  <img className={styles["a-logo"]}
+       alt=""
+       src="/sw-logo-color.svg"
+  />
+</Link>
+  </div>
+
 function SectionMenu () {
   const [viewport, setViewport] = useState(0);
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -77,13 +85,7 @@ function SectionMenu () {
     mobileDevice ?
       <section className={styles["menu"]}>
         <div className={styles["o-content"]}>
-          <div className={styles["m-logoContainer"]}>
-            <img className={styles["a-logo"]}
-                 alt=""
-                 src="/sw-logo-color.svg"
-            />
-          </div>
-
+           <Logo/>
           <button className={styles["a-button-menu"]} onClick={toggleMobileMenu}>
             {!mobileMenu ? "Menu" : "Close"}
           </button>
@@ -98,9 +100,7 @@ function SectionMenu () {
       <section className={styles["menu"]}
       >
         <div className={styles["o-content"]}>
-          <div className={styles["m-logoContainer"]}>
-            <img className={styles["a-logo"]} alt="" src="/sw-logo-color.svg" />
-          </div>
+          <Logo/>
           <NavBlock mobileDevice={mobileDevice} />
           <div className={styles["m-leftBlock"]}>
             <LocaleSwitch />

@@ -15,7 +15,7 @@
   text-align: left;
 
   @include device(XL-screen){
-    padding: 2.5rem 2.5rem 0 2.5rem;
+    padding: $padding-21xl $padding-21xl 0.2rem $padding-21xl;
   }
 
   .a-header {

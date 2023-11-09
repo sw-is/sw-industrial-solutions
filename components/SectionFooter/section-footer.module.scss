@@ -50,6 +50,9 @@
           @include device(L-screen) {
             margin-right: 2rem;
           }
+          img:hover{
+            cursor: pointer;
+          }
         }
 
         .m-leftBlock {

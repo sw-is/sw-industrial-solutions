@@ -36,7 +36,9 @@ const SectionFooter = () => {
 					<div className={styles['m-navigation']}>
 						<div className={styles['o-content']}>
 							<div className={styles['m-logoContainer']}>
+								<Link  to="top" spy={true} smooth={true}>
 							<img className={styles['a-logo']} alt="" src="/sw-logo-mono.svg" />
+								</Link>
 							</div>
 							<div className={styles['m-leftBlock']}>
 							  <NavBlock/>

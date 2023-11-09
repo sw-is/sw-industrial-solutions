@@ -38,9 +38,12 @@
     @include device(S-screen){
       margin-right: 2rem;
     }
+    img:hover{
+      cursor: pointer;
+    }
   }
     .a-button-menu{
-      font-size: $text-l-size;
+      font-size: $text-m-size;
     }
 
     .m-navigationBlock {
