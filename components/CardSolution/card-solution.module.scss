@@ -4,10 +4,8 @@
 .card {
   display: flex;
   flex-direction: column;
- // justify-content: space-between;
   align-items: flex-start;
-  //flex: 1 0 0;
-  padding: 2.5rem 2.5rem 0 2.5rem;
+  padding: 2.5rem;
   border-radius: $br-xl;
   background: $neutral-black;
   color: $neutral-white;
@@ -15,6 +13,10 @@
   min-width: 100px;
   height: 100%;
   text-align: left;
+
+  @include device(XL-screen){
+    padding: 2.5rem 2.5rem 0 2.5rem;
+  }
 
   .a-header {
     @include h3-header;
