@@ -73,7 +73,6 @@
 
             @include device(tablet) {
               height: auto;
-              //gap:  $gap-xl;
             }
 
             @include device(XL-screen) {
