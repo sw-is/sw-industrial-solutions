@@ -30,7 +30,6 @@
       }
     }
 
-
     .m-contact-info-cards {
       @include cards(2);
       gap: $gap-xl;
@@ -45,6 +44,10 @@
       box-sizing: border-box;
       gap: $gap-3xs;
       text-align: left;
+      @include text-m;
+      @include device(S-screen){
+        @include text-l;
+      }
 
       .a-address {
       }
