@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.card {
+  flex-direction: row;
+  gap: $gap-xl;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  @include device(L-screen) {
+    width: 45%;
+  }
+  @include device(XL-screen) {
+    width: 46%;
+  }
+  @include device(XXL-screen) {
+    width: 48%;
+  }
+
+
+  .a-icon {
+    background-color: $gray-300;
+    width: 2px;
+    height: 100%;
+  }
+
+  .m-cardText {
+    text-align: left;
+    gap: $gap-xl;
+    display: flex;
+    flex-direction: column;
+
+    .a-header {
+      @include h3-header;
+    }
+
+    .a-description {
+      @include section-description;
+      color: $neutral-black;
+      text-transform: none;
+      font-weight: 500;
+    }
+  }
+}

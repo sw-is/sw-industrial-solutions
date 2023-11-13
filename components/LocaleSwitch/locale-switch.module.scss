@@ -18,31 +18,31 @@
 
   .a-button{
    @include btn;
+    border-radius: 2.25rem;
+    cursor: unset;
+
     &:hover{
-      background-color: $gray-300;
+      color: $neutral-black;
+      background-color: $gray-200;
     }
   }
 
   .a-button.--darkMode{
     color: $neutral-white;
     &:hover{
-      color: $neutral-black;
-      @include btn-white;
+      background-color: $gray-700;
+
     }
   }
-
   .a-button.-inactive{
     color: $gray-500;
-    &:hover{
-      background-color: $gray-501;
-    }
+    cursor: pointer;
   }
-  .a-button.-inactive.--darkMode{
-    &:hover{
-      color: $neutral-black;
-      background-color: $neutral-white;
-    }
-  }
+
+  //.a-button.-inactive.--darkMode{
+  //  &:hover{
+  //  }
+  //}
 
   .a-divider{
     background-color: $gray-400;
@@ -51,6 +51,11 @@
   }
   .a-divider.--darkMode{
     background-color: $gray-500;
+  }
+
+  .a-button.--mobileMenu{
+    font-size: $text-l-size;
+    padding: $padding-xl;
   }
 }
 

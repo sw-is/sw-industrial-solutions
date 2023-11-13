@@ -1,0 +1,138 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.card {
+  display: flex;
+  padding: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background: $gray-100;
+  border-radius: $br-xl;
+  height: fit-content;
+  gap:$gap-21xl;
+
+
+  @include device(L-screen) {
+    width: 46%;
+  }
+  @include device(XL-screen) {
+    width: 47%;
+  }
+  @include device(XXL-screen) {
+    width: 48%;
+  }
+
+  .o-visibleCard {
+    display: flex;
+    flex-direction: column;
+    gap:$gap-xl;
+
+    .m-person {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-9xs;
+      align-items: flex-start;
+
+      .a-name {
+        @include h3-header;
+      }
+
+      .a-position {
+        @include section-description;
+        text-transform: none;
+        font-weight: 500;
+      }
+    }
+
+    .m-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $gap-3xs;
+      padding-bottom: $padding-3xs;
+      width: 100%;
+
+      @media only screen and (min-width: 560px) {
+        gap: $gap-21xl;
+      }
+      @include device(L-screen) {
+        gap: $gap-3xs;
+        justify-content: space-between;
+      }
+      @include device(XL-screen) {
+        gap: $gap-21xl;
+        justify-content: unset;
+      }
+
+      .a-phoneInfo {
+        display: flex;
+        align-items: center;
+        gap: $gap-3xs;
+
+        .a-phoneInfo__number {
+          white-space: nowrap;
+        }
+      }
+
+      .a-emailInfo {
+        display: flex;
+        align-items: center;
+        gap: $gap-3xs;
+
+        .a-emailInfo__email {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .a-CVButton {
+      @include element-wide;
+      @include btn-large;
+      @include btn-blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: $gap-9xs;
+
+      @include device(tablet) {
+        @include btn-small;
+        padding: 0.63rem 1.2rem 0.63rem 1.5rem;
+        width: min-content;
+      }
+
+      &__Icon {
+        &--fold {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+   .m-CV{
+     display: flex;
+     flex-direction: column;
+     gap:$gap-xl;
+     text-align: left;
+
+     .a-block{
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       gap:$gap-3xs;
+       &__header{
+        @include section-description;
+         color:$neutral-black;
+       }
+       .a-additionalInfo{
+         color: $gray-500;
+       }
+     }
+   }
+  }
+
+.card:has(> .m-CV) {
+  @include device(L-screen) {
+    height:94%;
+  }
+}

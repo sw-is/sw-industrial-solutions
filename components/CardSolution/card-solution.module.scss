@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem;
+  border-radius: $br-xl;
+  background: $neutral-black;
+  color: $neutral-white;
+  gap: $gap-xl;
+  min-width: 100px;
+  height: 100%;
+  text-align: left;
+
+  @include device(XL-screen){
+    padding: $padding-21xl $padding-21xl 0.2rem $padding-21xl;
+  }
+
+  .a-header {
+    @include h3-header;
+  }
+
+  .a-description {
+    @include section-description;
+    color: $neutral-white;
+    text-transform: none;
+    font-weight: 500;
+  }
+
+}
