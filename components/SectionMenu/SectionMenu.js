@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
 import { useSwipeable } from "react-swipeable";
 import { getContent } from "../../api/apolloClientContext";
-import resizeListener from "../../utils/resizeListener";
+import {resizeListener} from "../../utils";
 
 import styles from "./section-menu.module.scss";
 
