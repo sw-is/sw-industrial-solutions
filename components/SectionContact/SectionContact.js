@@ -18,17 +18,6 @@ const SectionContact = () => {
 				</div>
 				<div className={styles['m-contact-info-cards']}>
 					<CardContactInfo
-						name={contactsItems.name1}
-						position={contactsItems.position1}
-						phone={contactsItems.phone1}
-						email={contactsItems.email1}
-						cardHeader1={contactsItems.cardHeader11}
-						cardContent1={contactsItems.cardContent11}
-						cardHeader2={contactsItems.cardHeader12}
-						cardContent2={contactsItems.cardContent12}
-						additionalInfo={contactsItems.additionalInfo1}
-					/>
-					<CardContactInfo
 						name={contactsItems.name2}
 						position={contactsItems.position2}
 						phone={contactsItems.phone2}
